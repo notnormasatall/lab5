@@ -9,17 +9,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StoreTest {
     private Flower flower1 = new Flower(FlowerType.ROSE,Color.RED,5,10);
-    private Flower flower2 = new Flower(FlowerType.TULIP,Color.BLUE,9,5);
+    private Flower flower2 = new Flower(FlowerType.TULIP,Color.RED,9,5);
 
-    private List<Flower> flowers1 = new ArrayList<Flower>();
+    private List<Flower> flowers1 = new ArrayList<>();
+
 
     Store testStore = new Store(flowers1, flowers1);
-    Color paramOne = Color.RED;
+    Color paramOne = Color.BLUE;
 
     List<Flower> result = testStore.search(paramOne);
 
     @Test
     void searching() {
-        assertEquals(1,result.size());
+        assertEquals(0,result.size());
     }
 }
