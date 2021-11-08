@@ -1,5 +1,5 @@
 package flowers;
 
 public enum Color {
-    RED, BLUE;
+    RED, BLUE, YELLOW
 }
